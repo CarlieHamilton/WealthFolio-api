@@ -1,0 +1,41 @@
+{
+  "name": "WealthFolio-api",
+  "version": "0.0.1",
+  "description": "Personal finance and wealth management",
+  "main": "src/server.ts",
+  "scripts": {
+    "start": "tsc & node build/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon",
+    "build": "tsc",
+    "postinstall": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlieHamilton/WealthFolio-api.git"
+  },
+  "keywords": [],
+  "author": "Carlie Hamilton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarlieHamilton/WealthFolio-api/issues"
+  },
+  "homepage": "https://github.com/CarlieHamilton/WealthFolio-api#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "node": "^17.0.1",
+    "pg": "^8.7.1",
+    "pg-pool": "^3.4.1",
+    "postgres-migrations": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^16.11.7",
+    "@types/pg": "^8.6.1",
+    "@types/pg-pool": "^2.0.3",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  }
+}
