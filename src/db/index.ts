@@ -23,15 +23,20 @@ interface DbConfig {
     port: number
 }
 
-export const runDatabaseMigrations = async() => {
-    const dbConfig: DbConfig = {
-        user: 'postgres',
-        host: 'localhost',
-        database: 'wealthdb',
-        password: '1234abcd',
-        port: 5432,
-    }
+export const dbConfig: DbConfig = {
+    user: 'postgres',
+    host: 'localhost',
+    database: 'wealthdb',
+    password: '1234abcd',
+    port: 5432,
+}
 
+export const connectToDatabase = () => {
+    const client = new Client(dbConfig);
+    client.connect();
+}
+
+export const runDatabaseMigrations = async() => {
     // Note: when passing a client, it is assumed that the database already exists
     const client = new Client(dbConfig) // or a Pool, or a PoolClient
     await client.connect()
