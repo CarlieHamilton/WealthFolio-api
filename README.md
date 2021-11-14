@@ -11,4 +11,4 @@ Run server with `npm run dev`
 
 On startup of server it will set up database tables.
 
-If you want to reset your database, run `node ./src/db/dropTables.js   `
+If you want to reset your database, run `node ./src/db/dropTables.js` - warning this will delete all your tables and data
