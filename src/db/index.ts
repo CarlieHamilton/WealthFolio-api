@@ -31,7 +31,7 @@ export const dbConfig: DbConfig = {
     port: 5432,
 }
 
-export const connectToDatabase = () => {
+export const client = () => {
     const client = new Client(dbConfig);
     client.connect();
 }
